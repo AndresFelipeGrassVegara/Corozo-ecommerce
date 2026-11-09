@@ -1,0 +1,12 @@
+{
+  "name": "coroso-ecommerce",
+  "private": true,
+  "description": "Tienda Coroso: frontend React + backend NestJS",
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "setup": "npm run install:all && cp -n backend/.env.example backend/.env; npm --prefix backend run db:migrate",
+    "dev:api": "npm --prefix backend run start:dev",
+    "dev:web": "npm --prefix frontend run dev",
+    "build": "npm --prefix backend run build && npm --prefix frontend run build"
+  }
+}
